@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3529604B1E6A993300000DA4 /* TipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3529604A1E6A993300000DA4 /* TipViewController.swift */; };
 		35FBAE341E67E4ED006D80D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FBAE331E67E4ED006D80D3 /* AppDelegate.swift */; };
-		35FBAE361E67E4ED006D80D3 /* TipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FBAE351E67E4ED006D80D3 /* TipViewController.swift */; };
 		35FBAE391E67E4ED006D80D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35FBAE371E67E4ED006D80D3 /* Main.storyboard */; };
 		35FBAE3B1E67E4ED006D80D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35FBAE3A1E67E4ED006D80D3 /* Assets.xcassets */; };
 		35FBAE3E1E67E4ED006D80D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35FBAE3C1E67E4ED006D80D3 /* LaunchScreen.storyboard */; };
@@ -34,9 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3529604A1E6A993300000DA4 /* TipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TipViewController.swift; path = ../TipViewController.swift; sourceTree = "<group>"; };
 		35FBAE301E67E4ED006D80D3 /* iTipper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTipper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35FBAE331E67E4ED006D80D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		35FBAE351E67E4ED006D80D3 /* TipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipViewController.swift; sourceTree = "<group>"; };
 		35FBAE381E67E4ED006D80D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		35FBAE3A1E67E4ED006D80D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35FBAE3D1E67E4ED006D80D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -97,8 +97,8 @@
 		35FBAE321E67E4ED006D80D3 /* iTipper */ = {
 			isa = PBXGroup;
 			children = (
+				3529604A1E6A993300000DA4 /* TipViewController.swift */,
 				35FBAE331E67E4ED006D80D3 /* AppDelegate.swift */,
-				35FBAE351E67E4ED006D80D3 /* TipViewController.swift */,
 				35FBAE371E67E4ED006D80D3 /* Main.storyboard */,
 				35FBAE3A1E67E4ED006D80D3 /* Assets.xcassets */,
 				35FBAE3C1E67E4ED006D80D3 /* LaunchScreen.storyboard */,
@@ -194,13 +194,16 @@
 				TargetAttributes = {
 					35FBAE2F1E67E4ED006D80D3 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0820;
 					};
 					35FBAE431E67E4ED006D80D3 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0820;
 						TestTargetID = 35FBAE2F1E67E4ED006D80D3;
 					};
 					35FBAE4E1E67E4ED006D80D3 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0820;
 						TestTargetID = 35FBAE2F1E67E4ED006D80D3;
 					};
 				};
@@ -257,7 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35FBAE361E67E4ED006D80D3 /* TipViewController.swift in Sources */,
+				3529604B1E6A993300000DA4 /* TipViewController.swift in Sources */,
 				35FBAE341E67E4ED006D80D3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,6 +407,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TDD.iTip;
 				PRODUCT_NAME = iTipper;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -415,6 +419,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TDD.iTip;
 				PRODUCT_NAME = iTipper;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -426,6 +431,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TDD.iTipTests;
 				PRODUCT_NAME = iTipper;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iTipper.app/iTipper";
 			};
 			name = Debug;
@@ -438,6 +444,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TDD.iTipTests;
 				PRODUCT_NAME = iTipper;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iTipper.app/iTipper";
 			};
 			name = Release;
@@ -449,6 +456,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TDD.iTipUITests;
 				PRODUCT_NAME = iTipper;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = iTip;
 			};
 			name = Debug;
@@ -460,6 +468,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TDD.iTipUITests;
 				PRODUCT_NAME = iTipper;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = iTip;
 			};
 			name = Release;

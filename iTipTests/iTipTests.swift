@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import iTip
+@testable import iTipper
 
 class iTipTests: XCTestCase {
     
@@ -28,7 +28,7 @@ class iTipTests: XCTestCase {
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measureBlock {
+        self.measure {
             // Put the code you want to measure the time of here.
         }
     }
