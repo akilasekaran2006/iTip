@@ -27,7 +27,8 @@ class TipViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var equalsLabel: UILabel!
     @IBOutlet weak var tipPercentageLabel: UILabel!
     @IBOutlet weak var tipTotalLabel: UILabel!
-
+ 
+    private var formatter = NumberFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,7 +76,65 @@ class TipViewController: UIViewController,UITextFieldDelegate {
             self.segmentControl.alpha = 0;
             self.segmentControl.isHidden = true
         })
+        self.calculateTips()
     }
     
+    @IBAction func segmentControlTapped(_ sender: Any) {
+        self.tipPercentageLabel.text = self.segmentControl.titleForSegment(at: self.segmentControl.selectedSegmentIndex)
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        // Construct the text that will be in the field if this change is accepted
+        let oldText = textField.text! as String
+        var newText = (oldText as NSString).replacingCharacters(in: range, with: string)
+        var newTextString = String(newText)
+        
+        let digits = NSCharacterSet.decimalDigits
+        var digitText = ""
+        for c in (newTextString?.unicodeScalars)! {
+            if digits.contains(c) {
+                digitText.append(String(c))
+            }
+        }
+        formatter.numberStyle = NumberFormatter.Style.currency
+        formatter.locale = NSLocale.current
+        let numberFromField = (NSString(string: digitText).doubleValue)/100
+        newText = formatter.string(from: NSNumber(value:numberFromField))!
+        
+        textField.text = newText
+        return false
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.calculateTips()
+        return true
+    }
+    
+    
+    func calculateTips(){
+        var amountText = self.amountTextField.text!
+        let tipsText = self.tipPercentageLabel.text!
+        
+        amountText = amountText.replacingOccurrences(of: ",", with: "")
+        
+        let amount = amountText.substring(from: amountText.index(amountText.startIndex, offsetBy: 1))
+        let tips = tipsText.substring(to: tipsText.index(tipsText.endIndex, offsetBy: -1))
+        let total = Double(amount)!+(Double(tips)!/100)*Double(amount)!
+        self.tipTotalLabel.text = formatter.string(from: NSNumber(value:total))
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
