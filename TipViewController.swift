@@ -57,15 +57,19 @@ class TipViewController: UIViewController,UITextFieldDelegate {
         self.tipPercentageLabel.alpha = 0
         self.tipTotalLabel.alpha = 0
         
-        UIView .animate(withDuration: 1.25, animations:{
+        UIView .animate(withDuration: 0.25, animations: {
+            
             self.topView.frame = CGRect(x: 0, y: -100, width: self.topView.frame.size.width, height: self.topView.frame.size.height)
             self.bottowView.frame = CGRect(x: 0, y: 235, width: self.bottowView.frame.size.width, height: self.bottowView.frame.size.height)
-            self.segmentControl.alpha = 1
+            
             self.plusLabel.alpha = 1
             self.equalsLabel.alpha = 1
             self.tipPercentageLabel.alpha = 1
             self.tipTotalLabel.alpha = 1
-        })
+        }) { (true) in
+            self.segmentControl.alpha = 1
+        }
+       
     }
     
     func tapBlurButton(_ sender: UITapGestureRecognizer) {
@@ -115,6 +119,9 @@ class TipViewController: UIViewController,UITextFieldDelegate {
     func calculateTips(){
         var amountText = self.amountTextField.text!
         let tipsText = self.tipPercentageLabel.text!
+        if amountText.isEmpty{
+            amountText = "$0.0";
+        }
         
         amountText = amountText.replacingOccurrences(of: ",", with: "")
         
@@ -122,6 +129,14 @@ class TipViewController: UIViewController,UITextFieldDelegate {
         let tips = tipsText.substring(to: tipsText.index(tipsText.endIndex, offsetBy: -1))
         let total = Double(amount)!+(Double(tips)!/100)*Double(amount)!
         self.tipTotalLabel.text = formatter.string(from: NSNumber(value:total))
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "settingsSegue") {
+            let settingsViewController = segue.destination as! SettingsViewController
+            settingsViewController.tip = self.tipPercentageLabel.text!
+        }
     }
 }
 
