@@ -10,6 +10,15 @@
 		3529604B1E6A993300000DA4 /* TipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3529604A1E6A993300000DA4 /* TipViewController.swift */; };
 		3553967D1E6E903500024578 /* icon_setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3553967C1E6E903500024578 /* icon_setting@2x.png */; };
 		355396811E6E943C00024578 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355396801E6E943C00024578 /* SettingsViewController.swift */; };
+		35A55F091E7124EE0066E1B8 /* Person Male-64.png in Resources */ = {isa = PBXBuildFile; fileRef = 35A55F041E7124EE0066E1B8 /* Person Male-64.png */; };
+		35A55F0A1E7124EE0066E1B8 /* Moon Symbol-48.png in Resources */ = {isa = PBXBuildFile; fileRef = 35A55F051E7124EE0066E1B8 /* Moon Symbol-48.png */; };
+		35A55F0B1E7124EE0066E1B8 /* Moon Symbol-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 35A55F061E7124EE0066E1B8 /* Moon Symbol-50.png */; };
+		35A55F0C1E7124EE0066E1B8 /* Settings-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 35A55F071E7124EE0066E1B8 /* Settings-26.png */; };
+		35A55F0D1E7124EE0066E1B8 /* Settings-64.png in Resources */ = {isa = PBXBuildFile; fileRef = 35A55F081E7124EE0066E1B8 /* Settings-64.png */; };
+		35A55F131E712C440066E1B8 /* iTunesArtwork@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35A55F101E712C440066E1B8 /* iTunesArtwork@1x.png */; };
+		35A55F141E712C440066E1B8 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35A55F111E712C440066E1B8 /* iTunesArtwork@2x.png */; };
+		35A55F151E712C440066E1B8 /* iTunesArtwork@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35A55F121E712C440066E1B8 /* iTunesArtwork@3x.png */; };
+		35A55F171E712D0C0066E1B8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35A55F161E712D0C0066E1B8 /* Images.xcassets */; };
 		35FBAE341E67E4ED006D80D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FBAE331E67E4ED006D80D3 /* AppDelegate.swift */; };
 		35FBAE391E67E4ED006D80D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35FBAE371E67E4ED006D80D3 /* Main.storyboard */; };
 		35FBAE3B1E67E4ED006D80D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35FBAE3A1E67E4ED006D80D3 /* Assets.xcassets */; };
@@ -39,6 +48,15 @@
 		3529604A1E6A993300000DA4 /* TipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TipViewController.swift; path = ../TipViewController.swift; sourceTree = "<group>"; };
 		3553967C1E6E903500024578 /* icon_setting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_setting@2x.png"; sourceTree = "<group>"; };
 		355396801E6E943C00024578 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = ../SettingsViewController.swift; sourceTree = "<group>"; };
+		35A55F041E7124EE0066E1B8 /* Person Male-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Person Male-64.png"; sourceTree = "<group>"; };
+		35A55F051E7124EE0066E1B8 /* Moon Symbol-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Moon Symbol-48.png"; sourceTree = "<group>"; };
+		35A55F061E7124EE0066E1B8 /* Moon Symbol-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Moon Symbol-50.png"; sourceTree = "<group>"; };
+		35A55F071E7124EE0066E1B8 /* Settings-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings-26.png"; sourceTree = "<group>"; };
+		35A55F081E7124EE0066E1B8 /* Settings-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings-64.png"; sourceTree = "<group>"; };
+		35A55F101E712C440066E1B8 /* iTunesArtwork@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@1x.png"; sourceTree = "<group>"; };
+		35A55F111E712C440066E1B8 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		35A55F121E712C440066E1B8 /* iTunesArtwork@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@3x.png"; sourceTree = "<group>"; };
+		35A55F161E712D0C0066E1B8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = iTipper/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		35FBAE301E67E4ED006D80D3 /* iTipper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTipper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35FBAE331E67E4ED006D80D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35FBAE381E67E4ED006D80D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -85,6 +103,14 @@
 				35FBAE471E67E4ED006D80D3 /* iTipTests */,
 				35FBAE521E67E4ED006D80D3 /* iTipUITests */,
 				35FBAE311E67E4ED006D80D3 /* Products */,
+				35A55F041E7124EE0066E1B8 /* Person Male-64.png */,
+				35A55F051E7124EE0066E1B8 /* Moon Symbol-48.png */,
+				35A55F061E7124EE0066E1B8 /* Moon Symbol-50.png */,
+				35A55F071E7124EE0066E1B8 /* Settings-26.png */,
+				35A55F081E7124EE0066E1B8 /* Settings-64.png */,
+				35A55F101E712C440066E1B8 /* iTunesArtwork@1x.png */,
+				35A55F111E712C440066E1B8 /* iTunesArtwork@2x.png */,
+				35A55F121E712C440066E1B8 /* iTunesArtwork@3x.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +135,7 @@
 				35FBAE3A1E67E4ED006D80D3 /* Assets.xcassets */,
 				35FBAE3C1E67E4ED006D80D3 /* LaunchScreen.storyboard */,
 				35FBAE3F1E67E4ED006D80D3 /* Info.plist */,
+				35A55F161E712D0C0066E1B8 /* Images.xcassets */,
 			);
 			name = iTipper;
 			path = iTip;
@@ -240,10 +267,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35A55F0C1E7124EE0066E1B8 /* Settings-26.png in Resources */,
 				35FBAE3E1E67E4ED006D80D3 /* LaunchScreen.storyboard in Resources */,
+				35A55F141E712C440066E1B8 /* iTunesArtwork@2x.png in Resources */,
+				35A55F171E712D0C0066E1B8 /* Images.xcassets in Resources */,
 				35FBAE3B1E67E4ED006D80D3 /* Assets.xcassets in Resources */,
+				35A55F151E712C440066E1B8 /* iTunesArtwork@3x.png in Resources */,
 				3553967D1E6E903500024578 /* icon_setting@2x.png in Resources */,
 				35FBAE391E67E4ED006D80D3 /* Main.storyboard in Resources */,
+				35A55F0B1E7124EE0066E1B8 /* Moon Symbol-50.png in Resources */,
+				35A55F131E712C440066E1B8 /* iTunesArtwork@1x.png in Resources */,
+				35A55F091E7124EE0066E1B8 /* Person Male-64.png in Resources */,
+				35A55F0D1E7124EE0066E1B8 /* Settings-64.png in Resources */,
+				35A55F0A1E7124EE0066E1B8 /* Moon Symbol-48.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +448,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 676ZG8L9VU;
 				INFOPLIST_FILE = iTip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -425,6 +462,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 676ZG8L9VU;
 				INFOPLIST_FILE = iTip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
