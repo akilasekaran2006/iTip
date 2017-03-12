@@ -58,12 +58,14 @@ class SettingsViewController: UIViewController {
         self.tipSlider.setValue(Float(customTip), animated: false)
         self.customTipValue.text = String(format: "%d%%", customTip)
         self.modeSwitch.setOn(nightAppMode, animated: false)
+        self.stepperValue.text = String(format:"%d",noOfPersons)
+        self.splitBill.setOn(splitBillOn, animated: false)
         self.invertMode()
     }
     
     @IBAction func sliderAdjusted(_ sender: Any) {
-        self.customTipValue.text = String(format:"%d%%",(sender as! UISlider).value)
         customTip = Int(self.tipSlider.value)
+        self.customTipValue.text = String(format:"%d%%",customTip)
         let defaults = UserDefaults.standard
         defaults.set(Int(self.customTipValue.text!), forKey: "customTip")
         defaults.synchronize()
@@ -80,15 +82,18 @@ class SettingsViewController: UIViewController {
     
     
     @IBAction func splitBillTapped(_ sender: Any) {
+        if self.splitBill.isOn {
+            self.stepperView.isUserInteractionEnabled = true
+        }else{
+            self.stepperValue.text = "1"
+            self.stepperView.isUserInteractionEnabled = false
+        }
     }
     
     @IBAction func stepperModified(_ sender: Any) {
+        self.stepperValue.text = String(format:"%d",Int(self.stepperView.value))
     }
-    
-    
-   
-    
-    
+
     @IBAction func textButtonTapped(_ sender: Any) {
     }
     @IBAction func emailButtonTapped(_ sender: Any) {
@@ -138,7 +143,9 @@ class SettingsViewController: UIViewController {
     
     func saveValues(){
         let defaults = UserDefaults.standard
-        defaults.set(Int(self.customTipValue.text!), forKey: "customTip")
+        
+        let tips = self.customTipValue.text?.substring(to: (self.customTipValue.text?.index((self.customTipValue.text?.endIndex)!, offsetBy: -1))!)
+        defaults.set(Int(tips!), forKey: "customTip")
         defaults.set(self.modeSwitch.isOn, forKey: "nightAppMode")
         defaults.set(self.splitBill.isOn, forKey: "splitBill")
         defaults.set(Int(self.stepperValue.text!), forKey: "noOfPersons")

@@ -111,6 +111,20 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Per Person" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6h-bj-Pxu">
+                                        <rect key="frame" x="23" y="256" width="86" height="58"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NqT-rT-tqd">
+                                        <rect key="frame" x="117" y="256" width="235" height="58"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="45m-og-xtu" firstAttribute="leading" secondItem="rNK-jt-X4n" secondAttribute="leading" id="2Da-Sl-YrB"/>
@@ -153,6 +167,8 @@
                         <outlet property="amountTextField" destination="wPt-Lz-Lz1" id="0wV-w0-Qpk"/>
                         <outlet property="bottowView" destination="Qvo-BB-z20" id="auJ-67-snn"/>
                         <outlet property="equalsLabel" destination="rNK-jt-X4n" id="bSg-11-4og"/>
+                        <outlet property="perPersonAmountLabel" destination="NqT-rT-tqd" id="qHc-Mk-dCA"/>
+                        <outlet property="perPersonStaticLabel" destination="o6h-bj-Pxu" id="bR3-eV-gCI"/>
                         <outlet property="plusLabel" destination="45m-og-xtu" id="K9l-Zc-G3t"/>
                         <outlet property="segmentControl" destination="4Z0-j5-4Rt" id="WMh-ga-70Y"/>
                         <outlet property="tipPercentageLabel" destination="R1A-j4-A0J" id="Krv-oz-vyx"/>
@@ -228,7 +244,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="SBc-YO-U6D">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="SBc-YO-U6D">
                                 <rect key="frame" x="159" y="342" width="94" height="29"/>
                                 <connections>
                                     <action selector="stepperModified:" destination="qiF-om-zas" eventType="valueChanged" id="Lgx-R6-rZc"/>
@@ -240,7 +256,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcO-VL-fLa">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcO-VL-fLa">
                                 <rect key="frame" x="297" y="328" width="75" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="DOc-pT-2pN"/>
@@ -349,7 +365,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WzY-w1-2Ix" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="5g6-bz-Rdf">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5g6-bz-Rdf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

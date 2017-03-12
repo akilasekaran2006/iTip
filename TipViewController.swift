@@ -35,6 +35,8 @@ class TipViewController: UIViewController,UITextFieldDelegate {
  
     private var formatter = NumberFormatter()
     
+    @IBOutlet weak var perPersonAmountLabel: UILabel!
+    @IBOutlet weak var perPersonStaticLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,6 +54,23 @@ class TipViewController: UIViewController,UITextFieldDelegate {
         if customTip == 0 && !nightAppMode && !splitBill && noOfPersons == 0 {
             self.customizeInitialView()
         }
+        if customTip == 10{
+            self.segmentControl.selectedSegmentIndex = 0
+        }else if customTip == 20{
+            self.segmentControl.selectedSegmentIndex = 1
+        }else if customTip == 30{
+            self.segmentControl.selectedSegmentIndex = 2
+        }
+        self.tipPercentageLabel.text = String(format: "%d%%", customTip)
+        
+        if splitBill {
+            self.perPersonStaticLabel.isHidden = false
+            self.perPersonAmountLabel.isHidden = false
+        }else{
+            self.perPersonAmountLabel.isHidden = true
+            self.perPersonStaticLabel.isHidden = true
+        }
+        self.calculateTips()
         self.setNightAppMode(isNightModeOn: nightAppMode)
     }
     override func didReceiveMemoryWarning() {
@@ -113,8 +132,8 @@ class TipViewController: UIViewController,UITextFieldDelegate {
 
         let numberFromField = (NSString(string: digitText).doubleValue)/100
         newText = formatter.string(from: NSNumber(value:numberFromField))!
-        
         textField.text = newText
+        self.calculateTips()
         return false
     }
     
@@ -138,6 +157,9 @@ class TipViewController: UIViewController,UITextFieldDelegate {
         let total = Double(amount)!+(Double(tips)!/100)*Double(amount)!
         self.tipTotalLabel.text = formatter.string(from: NSNumber(value:total))
         
+        if splitBill {
+            self.perPersonAmountLabel.text = formatter.string(from: NSNumber(value:total/Double(noOfPersons)))
+        }
         let defaults = UserDefaults.standard
         defaults.set(Int(tips), forKey: "customTip")
         defaults.synchronize()
@@ -189,13 +211,14 @@ class TipViewController: UIViewController,UITextFieldDelegate {
             self.tipTotalLabel.textColor = .white
             self.plusLabel.textColor = .white
             self.equalsLabel.textColor = .white
+            self.perPersonAmountLabel.textColor = .white
+            self.perPersonStaticLabel.textColor = .white
             
             if (self.amountTextField.text?.characters.count==0){
                 self.amountTextField.attributedPlaceholder = NSAttributedString(string: formatter.string(from:NSNumber(value: 0.0))!,attributes: [NSForegroundColorAttributeName: UIColor.white])
                 self.tipTotalLabel.text = formatter.string(from:NSNumber(value: 0.0))
             }
-            
-            
+            UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
         }else{
             self.navigationController?.navigationBar.barTintColor = .white
             self.view.backgroundColor = .white
@@ -206,10 +229,14 @@ class TipViewController: UIViewController,UITextFieldDelegate {
             self.tipTotalLabel.textColor = .black
             self.plusLabel.textColor = .black
             self.equalsLabel.textColor = .black
+            self.perPersonAmountLabel.textColor = .black
+            self.perPersonStaticLabel.textColor = .black
+            
             if (self.amountTextField.text?.characters.count==0){
                 self.amountTextField.attributedPlaceholder = NSAttributedString(string: formatter.string(from:NSNumber(value: 0.0))!,attributes: [NSForegroundColorAttributeName: UIColor.black])
                 self.tipTotalLabel.text = formatter.string(from:NSNumber(value: 0.0))
             }
+            UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.black]
         }
     }
 }
