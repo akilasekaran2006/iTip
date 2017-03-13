@@ -19,8 +19,6 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var tipSlider: UISlider!
     @IBOutlet weak var tipLabel: UILabel!
-    @IBOutlet weak var textButton: UIButton!
-    @IBOutlet weak var emailButton: UIButton!
     @IBOutlet weak var splitBill: UISwitch!
     @IBOutlet weak var customTipValue: UILabel!
     @IBOutlet weak var stepperValue: UILabel!
@@ -43,10 +41,6 @@ class SettingsViewController: UIViewController {
         self.modeStaticLabel.backgroundColor = .clear
         self.splitStaticLabel.backgroundColor = .clear
         self.numberStaticLabel.backgroundColor = .clear
-        self.emailButton.backgroundColor = .clear
-        self.textButton.backgroundColor = .clear
-        self.textButton.setTitleColor(.black, for: .normal)
-        self.emailButton.setTitleColor(.black, for: .normal)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -61,6 +55,12 @@ class SettingsViewController: UIViewController {
         self.stepperValue.text = String(format:"%d",noOfPersons)
         self.splitBill.setOn(splitBillOn, animated: false)
         self.invertMode()
+        
+        if splitBillOn {
+            self.stepperView.isUserInteractionEnabled = true
+        }else{
+            self.stepperView.isUserInteractionEnabled = false
+        }
     }
     
     @IBAction func sliderAdjusted(_ sender: Any) {
@@ -108,10 +108,6 @@ class SettingsViewController: UIViewController {
             self.tipSlider.backgroundColor = .black
             self.tipLabel.backgroundColor = .black
             self.tipLabel.textColor = .white
-            self.textButton.backgroundColor = .black
-            self.textButton.setTitleColor(.white, for: .normal)
-            self.emailButton.backgroundColor = .black
-            self.emailButton.setTitleColor(.white, for: .normal)
             self.customTipValue.textColor = .white
             self.stepperValue.textColor = .white
             self.customTipStaticLabel.textColor = .white
@@ -119,6 +115,7 @@ class SettingsViewController: UIViewController {
             self.splitStaticLabel.textColor = .white
             self.numberStaticLabel.textColor = .white
             UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
+            self.navigationController?.navigationItem.title = "Custom Settings"
             
         }else{
             
@@ -127,10 +124,6 @@ class SettingsViewController: UIViewController {
             self.tipSlider.backgroundColor = .white
             self.tipLabel.backgroundColor = .white
             self.tipLabel.textColor = .black
-            self.textButton.backgroundColor = .white
-            self.textButton.setTitleColor(.black, for: .normal)
-            self.emailButton.backgroundColor = .white
-            self.emailButton.setTitleColor(.black, for: .normal)
             self.customTipValue.textColor = .black
             self.stepperValue.textColor = .black
             self.customTipStaticLabel.textColor = .black

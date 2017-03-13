@@ -89,7 +89,7 @@ class TipViewController: UIViewController,UITextFieldDelegate {
         UIView .animate(withDuration: 0.25, animations: {
             
             self.topView.frame = CGRect(x: 0, y: -100, width: self.topView.frame.size.width, height: self.topView.frame.size.height)
-            self.bottowView.frame = CGRect(x: 0, y: 235, width: self.bottowView.frame.size.width, height: self.bottowView.frame.size.height)
+            self.bottowView.frame = CGRect(x: 0, y: 213, width: self.bottowView.frame.size.width, height: self.bottowView.frame.size.height)
             
             self.plusLabel.alpha = 1
             self.equalsLabel.alpha = 1
@@ -103,7 +103,7 @@ class TipViewController: UIViewController,UITextFieldDelegate {
         self.amountTextField .resignFirstResponder()
         UIView .animate(withDuration: 0.25, animations:{
             self.topView.frame = CGRect(x: 0, y: 0, width: self.topView.frame.size.width, height: self.topView.frame.size.height)
-            self.bottowView.frame = CGRect(x: 0, y: 335, width: self.bottowView.frame.size.width, height: self.bottowView.frame.size.height)
+            self.bottowView.frame = CGRect(x: 0, y: 313, width: self.bottowView.frame.size.width, height: self.bottowView.frame.size.height)
         })
         self.calculateTips()
     }
@@ -192,6 +192,7 @@ class TipViewController: UIViewController,UITextFieldDelegate {
     
     func customizeInitialView() {
         
+        self.tipPercentageLabel.text = "10%"
         self.amountTextField.borderStyle = .none
         self.amountTextField.textColor = .black
         self.view.backgroundColor = .white
