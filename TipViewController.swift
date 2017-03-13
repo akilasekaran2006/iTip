@@ -72,6 +72,7 @@ class TipViewController: UIViewController,UITextFieldDelegate {
         }
         self.calculateTips()
         self.setNightAppMode(isNightModeOn: nightAppMode)
+        self.amountTextField.becomeFirstResponder()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
